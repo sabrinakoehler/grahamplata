@@ -1,6 +1,8 @@
 ---
 path: '/fourth-post'
 title: 'Fourth Blog Post'
+published: true
+date: '2017-09-29'
 ---
 
 # Modo violatus dicam
