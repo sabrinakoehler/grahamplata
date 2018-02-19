@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 const BlogPage = ({ data }) => (
   <div>
-    <h2>Blog</h2>
+    <h1>Blog</h1>
     <ul>
       {data.allMarkdownRemark.edges.map(post => (
         <li>
