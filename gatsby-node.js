@@ -9,6 +9,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         allMarkdownRemark {
             edges {
                 node {
+                    excerpt(pruneLength: 250)
                     html
                     id
                     frontmatter {

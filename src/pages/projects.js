@@ -1,10 +1,11 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+import Link from "gatsby-link";
+import { Header } from "semantic-ui-react";
 
 const Projects = () => (
   <div>
-    <h1>Projects</h1>
+    <Header as="h1">Projects</Header>
   </div>
-)
+);
 
-export default Projects
+export default Projects;
