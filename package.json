@@ -1,14 +1,16 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "grahamplata-dot-com",
+  "description": "Graham Plata's | Digital Sandbox",
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.222",
-    "gatsby-link": "^1.6.38",
-    "gatsby-plugin-react-helmet": "^2.0.6",
-    "gatsby-source-filesystem": "^1.5.25",
-    "gatsby-transformer-remark": "^1.7.34",
+    "exif-js": "^2.3.0",
+    "gatsby": "^1.9.236",
+    "gatsby-cli": "^1.1.48",
+    "gatsby-link": "^1.6.39",
+    "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-source-filesystem": "^1.5.27",
+    "gatsby-transformer-remark": "^1.7.37",
     "react-helmet": "^5.2.0",
     "semantic-ui-css": "^2.3.0",
     "semantic-ui-react": "^0.78.3"

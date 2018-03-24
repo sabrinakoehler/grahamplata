@@ -13,13 +13,13 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Graham Plata's Digital Sandbox"
       meta={[
-        { name: "description", content: "Sample" },
-        { name: "keywords", content: "sample, something" }
+        { name: "description", content: "Graham Plata's personal website." },
+        { name: "keywords", content: "Graham, Plata, Graham Plata" }
       ]}
     />
     <Container>
       <div
-        style={{ display: "flex", minHeight: "90vh", flexDirection: "column" }}
+        style={{ display: "flex", minHeight: "95vh", flexDirection: "column" }}
       >
         <div style={{ flex: 1, marginTop: "1.25em" }}>
           <MainMenu />
@@ -27,7 +27,7 @@ const TemplateWrapper = ({ children }) => (
         </div>
       </div>
       <Footer />
-    </Container>Ï
+    </Container>
   </div>
 );
 

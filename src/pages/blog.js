@@ -4,7 +4,6 @@ import { Header, Item, Image } from "semantic-ui-react";
 
 const BlogPage = ({ data }) => (
   <div>
-    <Header as="h1">Blog</Header>
     {data.allMarkdownRemark.edges.map(post => (
       <Item.Group>
         <Item>
@@ -19,9 +18,8 @@ const BlogPage = ({ data }) => (
               <p>{post.node.frontmatter.date}</p>
             </Item.Meta>
             <Item.Description>
-            <p>{post.node.excerpt}</p>
+              <p>{post.node.excerpt}</p>
             </Item.Description>
-            <Item.Extra>Additional Tags</Item.Extra>
           </Item.Content>
         </Item>
       </Item.Group>

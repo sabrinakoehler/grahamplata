@@ -11,11 +11,20 @@ export default function Template({ data }) {
         <h1 style={{ margin: 0, display: "inline-block" }}>
           {post.frontmatter.title}
         </h1>
-        <Button style={{ float: "right" }} size="tiny">
-          <Link to="/blog">Return</Link>
-        </Button>
+        <Button.Group style={{ float: "right" }}>
+          <Link style={{ textDecoration: "none" }} to="/">
+            <Button>{post.frontmatter.title}</Button>
+          </Link>
+          <Button.Or />
+          <Link style={{ textDecoration: "none" }} to="/blog">
+            <Button>Index</Button>
+          </Link>
+          <Button.Or />
+          <Link style={{ textDecoration: "none" }} to="/">
+            <Button>{post.frontmatter.title}</Button>
+          </Link>
+        </Button.Group>
       </div>
-
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   );
