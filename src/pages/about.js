@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
+import Img from "gatsby-image";
 import { Header, Grid, Image, Segment, List } from "semantic-ui-react";
-import profile from "./images/profile.png";
 
 const styles = {
   syapse: {
@@ -11,12 +11,12 @@ const styles = {
   }
 };
 
-const About = () => (
+const About = ({ data }) => (
   <div>
     <Grid stackable columns={2}>
       <Grid.Column>
         <h2>Hi, I'm Graham!</h2>
-        <Image src={profile} fluid />
+        <Img sizes={data.profileImage.sizes} />
         <h3>What are you known for?</h3>
         <p>
           I am a serial skill collector based in Philadelphia Pennsylvania.
@@ -103,5 +103,15 @@ const About = () => (
     </Grid>
   </div>
 );
+
+export const pageQuery = graphql`
+  query ProfileImageQuery {
+    profileImage: imageSharp(id: { regex: "/profile/" }) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes_noBase64
+      }
+    }
+  }
+`;
 
 export default About;

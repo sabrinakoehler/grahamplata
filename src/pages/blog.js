@@ -1,30 +1,31 @@
 import React from "react";
 import Link from "gatsby-link";
 import { Header, Item, Image } from "semantic-ui-react";
+import { Container, Feed, Icon } from "semantic-ui-react";
 
 const BlogPage = ({ data }) => (
-  <div>
-    {data.allMarkdownRemark.edges.map(post => (
-      <Item.Group>
-        <Item>
-          <Image src="http://via.placeholder.com/150x150" />
-          <Item.Content>
-            <Item.Header as="a">
-              <Link key={post.node.id} to={post.node.frontmatter.path}>
+  <Container fluid>
+    <Header as="h2">Blog</Header>
+    <Feed>
+      {data.allMarkdownRemark.edges.map(post => (
+        <Feed.Event key={post.node.id}>
+          <Feed.Label image="http://via.placeholder.com/150x150" />
+          <Feed.Content>
+            <Feed.Summary>
+              <Link to={post.node.frontmatter.path}>
                 {post.node.frontmatter.title}
               </Link>
-            </Item.Header>
-            <Item.Meta>
-              <p>{post.node.frontmatter.date}</p>
-            </Item.Meta>
-            <Item.Description>
-              <p>{post.node.excerpt}</p>
-            </Item.Description>
-          </Item.Content>
-        </Item>
-      </Item.Group>
-    ))}
-  </div>
+              <Feed.Date>{post.node.frontmatter.date}</Feed.Date>
+            </Feed.Summary>
+            <Feed.Meta>
+              <a href="https://www.twitter.com/grahamplata">@grahamplata</a>
+            </Feed.Meta>
+            <Feed.Extra text>{post.node.excerpt}</Feed.Extra>
+          </Feed.Content>
+        </Feed.Event>
+      ))}
+    </Feed>
+  </Container>
 );
 
 export const pageQuery = graphql`

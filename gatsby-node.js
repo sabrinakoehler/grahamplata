@@ -32,7 +32,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     posts.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: postTemplate
+        component: postTemplate,
+        context: {}
       });
     });
     return posts;

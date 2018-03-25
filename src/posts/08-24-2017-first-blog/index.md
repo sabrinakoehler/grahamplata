@@ -1,6 +1,6 @@
 ---
 path: '/first-post'
-title: 'First Blog Post'
+title: 'Hello World'
 published: true
 date: '2017-09-04'
 ---

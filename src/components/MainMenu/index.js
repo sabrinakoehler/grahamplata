@@ -3,9 +3,11 @@ import Link from "gatsby-link";
 import { Input, Menu } from "semantic-ui-react";
 
 class MainMenu extends Component {
-  state = { activeItem: "home" };
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  state = { activeItem: location.pathname.slice(1) };
+  props = { location };
+  handleItemClick = (e, { name }) => {
+    this.setState({ activeItem: name });
+  };
 
   render() {
     const { activeItem } = this.state;
@@ -16,7 +18,7 @@ class MainMenu extends Component {
           <Link to="/">
             <Menu.Item
               name="home"
-              active={activeItem === "home"}
+              active={activeItem === ""}
               onClick={this.handleItemClick}
               color="teal"
             />
@@ -33,14 +35,6 @@ class MainMenu extends Component {
             <Menu.Item
               name="blog"
               active={activeItem === "blog"}
-              onClick={this.handleItemClick}
-              color="teal"
-            />
-          </Link>
-          <Link to="/projects">
-            <Menu.Item
-              name="projects"
-              active={activeItem === "projects"}
               onClick={this.handleItemClick}
               color="teal"
             />
