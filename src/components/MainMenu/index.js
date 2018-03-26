@@ -7,7 +7,7 @@ class MainMenu extends Component {
   props = { location };
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name });
-  };
+  }
 
   render() {
     const { activeItem } = this.state;

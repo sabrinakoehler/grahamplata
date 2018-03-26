@@ -4,7 +4,7 @@ import { Header, Item, Image } from "semantic-ui-react";
 import { Container, Feed, Icon } from "semantic-ui-react";
 
 const BlogPage = ({ data }) => (
-  <Container fluid>
+  <Container text>
     <Header as="h2">Blog</Header>
     <Feed>
       {data.allMarkdownRemark.edges.map(post => (
@@ -20,7 +20,7 @@ const BlogPage = ({ data }) => (
             <Feed.Meta>
               <a href="https://www.twitter.com/grahamplata">@grahamplata</a>
             </Feed.Meta>
-            <Feed.Extra text>{post.node.excerpt}</Feed.Extra>
+            <Feed.Extra>{post.node.excerpt}</Feed.Extra>
           </Feed.Content>
         </Feed.Event>
       ))}

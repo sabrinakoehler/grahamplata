@@ -27,6 +27,7 @@ const About = ({ data }) => (
         </p>
       </Grid.Column>
       <Grid.Column>
+        <h2>Learn more about me</h2>
         <h3>What are you commonly known for?</h3>
         <p>
           I am commonly known for my technological prowess and keen eye for
@@ -92,6 +93,26 @@ const About = ({ data }) => (
             <List.Icon name="angle double right" />
             <List.Content>
               <List.Header>ICELAND</List.Header>
+              <List.Description>
+                Iceland is the most unique and exciting place on the planet. You
+                go to Iceland to have adventures and see natural beauty.
+              </List.Description>
+            </List.Content>
+          </List.Item>
+          <List.Item>
+            <List.Icon name="angle double right" />
+            <List.Content>
+              <List.Header>New Zealand</List.Header>
+              <List.Description>
+                Iceland is the most unique and exciting place on the planet. You
+                go to Iceland to have adventures and see natural beauty.
+              </List.Description>
+            </List.Content>
+          </List.Item>
+          <List.Item>
+            <List.Icon name="angle double right" />
+            <List.Content>
+              <List.Header>San Francisco</List.Header>
               <List.Description>
                 Iceland is the most unique and exciting place on the planet. You
                 go to Iceland to have adventures and see natural beauty.
