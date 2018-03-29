@@ -7,7 +7,7 @@ class MainMenu extends Component {
   props = { location };
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name });
-  }
+  };
 
   render() {
     const { activeItem } = this.state;
@@ -39,10 +39,10 @@ class MainMenu extends Component {
               color="teal"
             />
           </Link>
-          <Link to="/resume">
+          <Link to="/projects">
             <Menu.Item
-              name="resume"
-              active={activeItem === "resume"}
+              name="projects"
+              active={activeItem === "projects"}
               onClick={this.handleItemClick}
               color="teal"
             />

@@ -72,7 +72,7 @@ const About = ({ data }) => (
               <List.Header>Welding</List.Header>
               <List.Description>
                 I want to restore and work on cars eventually. I feel this is a
-                nessesary skill for that.
+                necessary skill for that.
               </List.Description>
             </List.Content>
           </List.Item>
@@ -104,8 +104,9 @@ const About = ({ data }) => (
             <List.Content>
               <List.Header>New Zealand</List.Header>
               <List.Description>
-                Iceland is the most unique and exciting place on the planet. You
-                go to Iceland to have adventures and see natural beauty.
+                Much like Iceland New Zealand has an amazing range of
+                breathtaking scenery but ranges from subtropical forests to
+                snow-covered mountains.
               </List.Description>
             </List.Content>
           </List.Item>
@@ -113,10 +114,7 @@ const About = ({ data }) => (
             <List.Icon name="angle double right" />
             <List.Content>
               <List.Header>San Francisco</List.Header>
-              <List.Description>
-                Iceland is the most unique and exciting place on the planet. You
-                go to Iceland to have adventures and see natural beauty.
-              </List.Description>
+              <List.Description>I have heard good things.</List.Description>
             </List.Content>
           </List.Item>
         </List>

@@ -12,6 +12,8 @@ const styles = {
   }
 };
 
+const rand = Math.floor(Math.random() * 12);
+
 const IndexPage = ({ data }) => (
   <div>
     <Container fluid>
