@@ -1,33 +1,43 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+import Link from "gatsby-link";
+import { Header, Item, Image } from "semantic-ui-react";
+import { Container, Feed, Icon } from "semantic-ui-react";
 
 const BlogPage = ({ data }) => (
-  <div>
-    <h1>Blog</h1>
-    <ul>
+  <Container text>
+    <Header as="h2">Blog</Header>
+    <Feed>
       {data.allMarkdownRemark.edges.map(post => (
-        <li>
-          <Link
-            key={post.node.id}
-            to={post.node.frontmatter.path}>
-            {post.node.frontmatter.title}
-          </Link>
-          <p>{post.node.frontmatter.date}</p>
-        </li>
+        <Feed.Event key={post.node.id}>
+          <Feed.Label image="http://via.placeholder.com/150x150" />
+          <Feed.Content>
+            <Feed.Summary>
+              <Link to={post.node.frontmatter.path}>
+                {post.node.frontmatter.title}
+              </Link>
+              <Feed.Date>{post.node.frontmatter.date}</Feed.Date>
+            </Feed.Summary>
+            <Feed.Meta>
+              <a href="https://www.twitter.com/grahamplata">@grahamplata</a>
+            </Feed.Meta>
+            <Feed.Extra>{post.node.excerpt}</Feed.Extra>
+          </Feed.Content>
+        </Feed.Event>
       ))}
-    </ul>
-  </div>
-)
+    </Feed>
+  </Container>
+);
 
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       limit: 10
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: {published: {eq: true } } }
+      filter: { frontmatter: { published: { eq: true } } }
     ) {
       edges {
         node {
+          excerpt(pruneLength: 250)
           id
           frontmatter {
             title
@@ -38,6 +48,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default BlogPage
+export default BlogPage;
