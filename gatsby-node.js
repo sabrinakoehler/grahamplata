@@ -8,9 +8,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark {
+        totalCount
         edges {
           node {
-            excerpt(pruneLength: 250)
+            excerpt(pruneLength: 210)
             html
             id
             frontmatter {
@@ -22,20 +23,28 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
       }
     }
-  `).then(res => {
-    if (res.errors) {
-      return Promise.reject(res.errors);
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors);
     }
 
-    const posts = res.data.allMarkdownRemark.edges;
-
-    posts.forEach(({ node }) => {
+    const posts = result.data.allMarkdownRemark.edges;
+    const count = result.data.allMarkdownRemark.totalCount;
+    console.log(count)
+    // Create pages for each markdown file.
+    posts.forEach(({ node }, index) => {
+      // const prev = index === 0 ? false : posts[index - 1].node;
+      // const next = index === posts.length - 1 ? false : posts[index + 1].node;
       createPage({
         path: node.frontmatter.path,
-        component: postTemplate,
-        context: {}
+        component: postTemplate
+        // context: {
+        //   prev,
+        //   next
+        // }
       });
     });
+
     return posts;
   });
 };

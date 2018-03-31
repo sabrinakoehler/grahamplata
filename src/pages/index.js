@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query HeaderImageQuery {
-    headerImage: imageSharp(id: { regex: "/2/" }) {
+    headerImage: imageSharp(id: { regex: "/1/" }) {
       sizes(maxWidth: 5000) {
         ...GatsbyImageSharpSizes
       }

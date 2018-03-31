@@ -3,11 +3,14 @@ import Link from "gatsby-link";
 import { Input, Menu } from "semantic-ui-react";
 
 class MainMenu extends Component {
-  state = { activeItem: location.pathname.slice(1) };
-  props = { location };
+  state = { activeItem: null };
   handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name });
   };
+
+  componentDidMount() {
+    this.setState({ activeItem: location.pathname.slice(1) });
+  }
 
   render() {
     const { activeItem } = this.state;
@@ -15,38 +18,38 @@ class MainMenu extends Component {
     return (
       <Menu secondary>
         <Menu.Menu position="right">
-          <Link to="/">
-            <Menu.Item
-              name="home"
-              active={activeItem === ""}
-              onClick={this.handleItemClick}
-              color="teal"
-            />
-          </Link>
-          <Link to="/about">
-            <Menu.Item
-              name="about"
-              active={activeItem === "about"}
-              onClick={this.handleItemClick}
-              color="purple"
-            />
-          </Link>
-          <Link to="/blog">
-            <Menu.Item
-              name="blog"
-              active={activeItem === "blog"}
-              onClick={this.handleItemClick}
-              color="teal"
-            />
-          </Link>
-          <Link to="/projects">
-            <Menu.Item
-              name="projects"
-              active={activeItem === "projects"}
-              onClick={this.handleItemClick}
-              color="teal"
-            />
-          </Link>
+          <Menu.Item
+            as={Link}
+            to="/"
+            name="home"
+            active={activeItem === ""}
+            onClick={this.handleItemClick}
+            color="teal"
+          />
+          <Menu.Item
+            as={Link}
+            to="/about"
+            name="about"
+            active={activeItem === "about"}
+            onClick={this.handleItemClick}
+            color="teal"
+          />
+          <Menu.Item
+            as={Link}
+            to="/blog"
+            name="blog"
+            active={activeItem === "blog"}
+            onClick={this.handleItemClick}
+            color="teal"
+          />
+          <Menu.Item
+            as={Link}
+            to="/projects"
+            name="projects"
+            active={activeItem === "projects"}
+            onClick={this.handleItemClick}
+            color="teal"
+          />
         </Menu.Menu>
       </Menu>
     );
