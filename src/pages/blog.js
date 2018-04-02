@@ -15,11 +15,14 @@ const BlogPage = ({ data }) => (
               <Link to={post.node.frontmatter.path}>
                 {post.node.frontmatter.title}
               </Link>
-              <Feed.Date>{post.node.frontmatter.date}</Feed.Date>
             </Feed.Summary>
-            <Feed.Meta>
-              <a href="https://www.twitter.com/grahamplata">@grahamplata</a>
-            </Feed.Meta>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Feed.Meta>
+                Author:{" "}
+                <a href="https://www.twitter.com/grahamplata">@grahamplata</a>
+              </Feed.Meta>
+              <Feed.Meta>Date: {post.node.frontmatter.date}</Feed.Meta>
+            </div>
             <Feed.Extra>{post.node.excerpt}</Feed.Extra>
           </Feed.Content>
         </Feed.Event>

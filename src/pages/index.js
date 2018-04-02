@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
-import { Container, Image, Segment } from "semantic-ui-react";
+import { Container, Segment } from "semantic-ui-react";
 
 const styles = {
   label: {
@@ -27,8 +27,8 @@ const IndexPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query HeaderImageQuery {
-    headerImage: imageSharp(id: { regex: "/1/" }) {
-      sizes(maxWidth: 5000) {
+    headerImage: imageSharp(id: { regex: "/10/" }) {
+      sizes(maxWidth: 1280) {
         ...GatsbyImageSharpSizes
       }
     }
