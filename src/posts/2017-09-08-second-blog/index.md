@@ -4,9 +4,7 @@ title: 'Starting a blog... again!'
 date: '2018-03-30'
 ---
 
-## Hello Again
-
-![Image of Yaktocat](http://via.placeholder.com/700x300/6441a5/fff?text=Graham+Plata+PlaceHolder)
+![](bird.png)
 
 Whenever I want to learn something new I always try to tie it into a project. I stumbled on gatsbyJS while doing research on React Boilerplates. For the past few months, I had been deep into React development and gatsby dovetailed right into my workflow.
 

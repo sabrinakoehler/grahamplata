@@ -10,16 +10,16 @@ const Template = ({ data, pathContext }) => {
   return (
     <Container text>
       <div style={{ marginBottom: 25 }}>
+        <Link style={{ textDecoration: "none", float: "right" }} to="/blog">
+          <Button compact color="teal">
+            Return to Index
+          </Button>
+        </Link>
         <h1 style={{ margin: 0, display: "inline-block" }}>
           {post.frontmatter.title}
         </h1>
-        <Link style={{ textDecoration: "none", float: "right" }} to="/blog">
-          <Button>Return</Button>
-        </Link>
       </div>
-      <Container fluid>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Container>
+      <Container dangerouslySetInnerHTML={{ __html: post.html }} />
     </Container>
   );
 };

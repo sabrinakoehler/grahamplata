@@ -30,7 +30,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges;
     const count = result.data.allMarkdownRemark.totalCount;
-    console.log(count)
     // Create pages for each markdown file.
     posts.forEach(({ node }, index) => {
       // const prev = index === 0 ? false : posts[index - 1].node;
