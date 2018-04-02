@@ -17,7 +17,9 @@ const Template = ({ data, pathContext }) => {
           <Button>Return</Button>
         </Link>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Container fluid>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Container>
     </Container>
   );
 };

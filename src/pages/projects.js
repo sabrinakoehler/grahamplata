@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "gatsby-link";
-import { Header } from "semantic-ui-react";
+import { Container, Header } from "semantic-ui-react";
 
 const Projects = () => (
-  <div>
+  <Container fluid>
     <Header as="h1">Projects</Header>
-  </div>
+  </Container>
 );
 
 export default Projects;

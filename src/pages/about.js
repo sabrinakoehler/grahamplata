@@ -105,7 +105,7 @@ const About = ({ data }) => (
               <List.Header>New Zealand</List.Header>
               <List.Description>
                 Much like Iceland New Zealand has an amazing range of
-                breathtaking scenery but ranges from subtropical forests to
+                breathtaking scenery but from subtropical forests to
                 snow-covered mountains.
               </List.Description>
             </List.Content>
