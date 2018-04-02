@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
-import { Container, Segment } from "semantic-ui-react";
+import { Image, Container, Segment } from "semantic-ui-react";
 
 const styles = {
   label: {
@@ -11,25 +11,34 @@ const styles = {
     fontSize: 10
   }
 };
-
-const rand = Math.floor(Math.random() * 12);
+const rand = Math.floor(Math.random() * 11);
 
 const IndexPage = ({ data }) => (
-  <div>
-    <Container fluid>
-      <Img sizes={data.headerImage.sizes} />
-      <div>
-        <p style={styles.label}>Nikon D500 80.0-400.0 mm ƒ/4.5-5.6</p>
-      </div>
-    </Container>
-  </div>
+  <Container fluid>
+    <Img
+      style={{
+        width: `100%`,
+        objectPosition: `contain`
+      }}
+      resolutions={data.allFile.edges[rand].node.childImageSharp.resolutions}
+    />
+    <div>
+      <p style={styles.label}>Nikon D500 80.0-400.0 mm ƒ/4.5-5.6</p>
+    </div>
+  </Container>
 );
 
-export const pageQuery = graphql`
-  query HeaderImageQuery {
-    headerImage: imageSharp(id: { regex: "/10/" }) {
-      sizes(maxWidth: 1280) {
-        ...GatsbyImageSharpSizes
+export const query = graphql`
+  query ImagesQuery {
+    allFile(filter: { sourceInstanceName: { eq: "headerImages" } }) {
+      edges {
+        node {
+          childImageSharp {
+            resolutions(width: 1280) {
+              ...GatsbyImageSharpResolutions
+            }
+          }
+        }
       }
     }
   }
