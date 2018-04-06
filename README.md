@@ -1,15 +1,12 @@
-# gatsby-starter-default
+# Welcome to my Personal Website
 
-The default Gatsby starter
+Find it here: `grahamplata.com`
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Built With:
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+* [React](https://www.reactjs.org/) - Component-Based JavaScript library for building user interfaces
+* [Gatsby](https://www.gatsbyjs.org/) - Static Website Generator
+* [Semantic UI](https://react.semantic-ui.com) Responsive layouts using human-friendly HTML.
 
-```
-gatsby new gatsby-example-site
-```
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+https://reactjs.org/
+Deployed on: [Netlify](https://netlify.com)

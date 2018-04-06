@@ -2,7 +2,7 @@
   "name": "grahamplata-dot-com",
   "description": "Graham Plata's | Digital Sandbox",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Graham Plata <graham.plata@gmail.com>",
   "dependencies": {
     "exif-js": "^2.3.0",
     "gatsby": "^1.9.236",
