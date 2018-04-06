@@ -11,14 +11,15 @@ const styles = {
     fontSize: 10
   }
 };
-const rand = Math.floor(Math.random() * 11);
+
+const rand = Math.floor(Math.random() * 10 + 1);
 
 const IndexPage = ({ data }) => (
   <Container fluid>
     <Img
       style={{
         width: `100%`,
-        objectPosition: `contain`
+        objectPosition: `strech`
       }}
       resolutions={data.allFile.edges[rand].node.childImageSharp.resolutions}
     />
