@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import { Header, Item, Image } from "semantic-ui-react";
-import { Container, Feed, Icon } from "semantic-ui-react";
+import { Header, Image, Container, Feed, Icon } from "semantic-ui-react";
 
 const styles = {
   syapse: {
@@ -12,6 +11,14 @@ const styles = {
   spacing: {
     paddingTop: "3em",
     paddingBottom: "3em"
+  },
+  label: {
+    float: "left",
+    paddingRight: "7px",
+    paddingTop: "10px"
+  },
+  extra: {
+    paddingTop: "8px"
   }
 };
 
@@ -22,7 +29,6 @@ const BlogPage = ({ data }) => (
       <Feed>
         {data.allMarkdownRemark.edges.map(post => (
           <Feed.Event key={post.node.id}>
-            <Feed.Label image="http://via.placeholder.com/150x150" />
             <Feed.Content>
               <Feed.Summary>
                 <Link to={post.node.frontmatter.path}>
@@ -36,7 +42,13 @@ const BlogPage = ({ data }) => (
                 </Feed.Meta>
                 <Feed.Meta>Date: {post.node.frontmatter.date}</Feed.Meta>
               </div>
-              <Feed.Extra>{post.node.excerpt}</Feed.Extra>
+              <Feed.Label
+                style={styles.label}
+                image={
+                  post.node.frontmatter.featuredImage.childImageSharp.sizes
+                }
+              />
+              <Feed.Extra style={styles.extra}>{post.node.excerpt}</Feed.Extra>
             </Feed.Content>
           </Feed.Event>
         ))}
@@ -53,12 +65,19 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 450)
           id
           frontmatter {
             title
             path
             date
+            featuredImage {
+              childImageSharp {
+                sizes(maxWidth: 150) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }
