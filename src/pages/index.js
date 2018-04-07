@@ -9,6 +9,10 @@ const styles = {
     marginLeft: 5,
     letterSpacing: 2,
     fontSize: 10
+  },
+  image: {
+    paddingTop: "3em",
+    paddingBottom: "3em"
   }
 };
 
@@ -16,9 +20,14 @@ const rand = Math.floor(Math.random() * 10 + 1);
 
 const IndexPage = ({ data }) => (
   <Container fluid>
-    <Img sizes={data.allFile.edges[rand].node.childImageSharp.sizes} />
-    <div>
-      <p style={styles.label}>Nikon D500 80.0-400.0 mm ƒ/4.5-5.6</p>
+    <h2>Welcome to my Digital Sandbox</h2>
+    <div style={styles.image}>
+      <Img sizes={data.allFile.edges[rand].node.childImageSharp.sizes} />
+      <div>
+        <p style={styles.label && styles.inner}>
+          Nikon D500 80.0-400.0 mm ƒ/4.5-5.6
+        </p>
+      </div>
     </div>
   </Container>
 );
