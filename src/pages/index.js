@@ -20,8 +20,8 @@ const rand = Math.floor(Math.random() * 10 + 1);
 
 const IndexPage = ({ data }) => (
   <Container fluid>
-    <h2>Welcome to my Digital Sandbox</h2>
     <div style={styles.image}>
+    <h2>Welcome to my Digital Sandbox</h2>
       <Img sizes={data.allFile.edges[rand].node.childImageSharp.sizes} />
       <div>
         <p style={styles.label && styles.inner}>
