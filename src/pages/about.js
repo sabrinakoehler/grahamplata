@@ -8,11 +8,15 @@ const styles = {
     color: "#21C2D2",
     fontWeight: 700,
     textTransform: "uppercase"
+  },
+  spacing: {
+    paddingTop: "3em",
+    paddingBottom: "3em"
   }
 };
 
 const About = ({ data }) => (
-  <div>
+  <div style={styles.spacing}>
     <Grid stackable columns={2}>
       <Grid.Column>
         <h2>Hi, I'm Graham!</h2>
