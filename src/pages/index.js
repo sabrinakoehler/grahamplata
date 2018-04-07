@@ -16,13 +16,7 @@ const rand = Math.floor(Math.random() * 10 + 1);
 
 const IndexPage = ({ data }) => (
   <Container fluid>
-    <Img
-      style={{
-        width: `100%`,
-        objectPosition: `strech`
-      }}
-      resolutions={data.allFile.edges[rand].node.childImageSharp.resolutions}
-    />
+    <Img sizes={data.allFile.edges[rand].node.childImageSharp.sizes} />
     <div>
       <p style={styles.label}>Nikon D500 80.0-400.0 mm ƒ/4.5-5.6</p>
     </div>
@@ -35,8 +29,8 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            resolutions(width: 1280) {
-              ...GatsbyImageSharpResolutions
+            sizes(maxWidth: 1000) {
+              ...GatsbyImageSharpSizes
             }
           }
         }
