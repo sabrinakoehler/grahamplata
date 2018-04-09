@@ -44,7 +44,7 @@ const About = ({ data }) => (
         </p>
       </Grid.Column>
       <Grid.Column>
-        <h2>Learn more about me</h2>
+        <h2>Learn more about me {emojify("😺", options)}</h2>
         <h3>What are you commonly known for?</h3>
         <p>
           I am commonly known for my technological prowess and keen eye for
