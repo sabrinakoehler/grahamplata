@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
 import { Header, Grid, Image, Segment, List } from "semantic-ui-react";
+import { emojify } from "react-emojione";
 
 const styles = {
   syapse: {
@@ -15,11 +16,23 @@ const styles = {
   }
 };
 
+const options = {
+  convertShortnames: true,
+  convertUnicode: true,
+  convertAscii: true,
+  style: {
+    height: 48,
+    margin: 1
+  },
+  // this click handler will be set on every emoji
+  onClick: event => alert(event.target.title)
+};
+
 const About = ({ data }) => (
   <div style={styles.spacing}>
     <Grid stackable columns={2}>
       <Grid.Column>
-        <h2>Hi, I'm Graham!</h2>
+        <h2>Hi, I'm Graham! {emojify("👋", options)}</h2>
         <Img sizes={data.profileImage.sizes} />
         <h3>What are you known for?</h3>
         <p>
@@ -94,7 +107,7 @@ const About = ({ data }) => (
         <h3>Where would you like to travel?</h3>
         <List>
           <List.Item>
-            <List.Icon name="angle double right" />
+            <List.Icon>{emojify("🏔️")}</List.Icon>
             <List.Content>
               <List.Header>ICELAND</List.Header>
               <List.Description>
@@ -104,7 +117,7 @@ const About = ({ data }) => (
             </List.Content>
           </List.Item>
           <List.Item>
-            <List.Icon name="angle double right" />
+            <List.Icon>{emojify("🗺️")}</List.Icon>
             <List.Content>
               <List.Header>New Zealand</List.Header>
               <List.Description>
@@ -115,7 +128,7 @@ const About = ({ data }) => (
             </List.Content>
           </List.Item>
           <List.Item>
-            <List.Icon name="angle double right" />
+            <List.Icon>{emojify("🌁")}</List.Icon>
             <List.Content>
               <List.Header>San Francisco</List.Header>
               <List.Description>I have heard good things.</List.Description>
