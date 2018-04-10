@@ -53,9 +53,9 @@ const About = ({ data }) => (
         <h3>Where are you currently?</h3>
         <p>
           Right now I work as a Support Engineer for{" "}
-          <Link style={styles.syapse} to="https://www.syapse.com/">
+          <a style={styles.syapse} href="https://www.syapse.com/">
             Syapse
-          </Link>
+          </a>
           ~ provides a precision medicine data platform enabling healthcare
           providers to use molecular profiling to diagnose and treat patients.
         </p>
@@ -65,7 +65,7 @@ const About = ({ data }) => (
             <List.Icon name="circle notched" />
             <List.Content>
               <List.Header>
-                <Link to="https://redux.js.org/">Redux</Link>
+                <a href="https://redux.js.org/">Redux</a>
               </List.Header>
               <List.Description>
                 Redux will allow predictable state in my web apps.
@@ -76,7 +76,7 @@ const About = ({ data }) => (
             <List.Icon name="circle notched" />
             <List.Content>
               <List.Header>
-                <Link to="https://www.python.org/">Python</Link>
+                <a href="https://www.python.org/">Python</a>
               </List.Header>
               <List.Description>
                 I guess to... "Automate the boring stuff..."
