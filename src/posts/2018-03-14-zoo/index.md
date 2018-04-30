@@ -1,5 +1,5 @@
 ---
-path: '/zoo2'
+path: '/zoo'
 title: 'Photos from the Philadelphia Zoo'
 date: '2018-03-14'
 featuredImage: "./13.jpg"

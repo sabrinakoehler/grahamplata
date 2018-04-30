@@ -3,9 +3,9 @@ import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import { Container, Button } from "semantic-ui-react";
 
-const Template = ({ data, pathContext }) => {
+const Template = ({ data }) => {
   const { markdownRemark: post } = data;
-
+  
   return (
     <Container>
       <div style={{ marginBottom: 25 }}>
