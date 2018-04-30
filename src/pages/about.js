@@ -23,9 +23,7 @@ const options = {
   style: {
     height: 48,
     margin: 1
-  },
-  // this click handler will be set on every emoji
-  onClick: event => alert(event.target.title)
+  }
 };
 
 const About = ({ data }) => (

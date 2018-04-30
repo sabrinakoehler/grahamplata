@@ -5,10 +5,9 @@ import { Container, Button } from "semantic-ui-react";
 
 const Template = ({ data, pathContext }) => {
   const { markdownRemark: post } = data;
-  // const { next, prev } = pathContext;
 
   return (
-    <Container text>
+    <Container>
       <div style={{ marginBottom: 25 }}>
         <Link style={{ textDecoration: "none", float: "right" }} to="/blog">
           <Button compact color="teal">

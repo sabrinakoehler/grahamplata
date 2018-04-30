@@ -1,71 +1,48 @@
 import React from "react";
 import Link from "gatsby-link";
-import { Header, Image, Container, Feed, Icon } from "semantic-ui-react";
-
-const styles = {
-  syapse: {
-    color: "#21C2D2",
-    fontWeight: 700,
-    textTransform: "uppercase"
-  },
-  spacing: {
-    paddingTop: "3em",
-    paddingBottom: "3em"
-  },
-  label: {
-    float: "left",
-    paddingRight: "7px",
-    paddingTop: "10px"
-  },
-  extra: {
-    paddingTop: "8px"
-  }
-};
+import { Card, Header, Image, Container, Grid, Icon } from "semantic-ui-react";
 
 const BlogPage = ({ data }) => (
-  <div style={styles.spacing}>
-    <Container text>
-      <Header as="h2">Blog</Header>
-      <Feed>
-        {data.allMarkdownRemark.edges.map(post => (
-          <Feed.Event key={post.node.id}>
-            <Feed.Content>
-              <Feed.Summary>
-                <Link to={post.node.frontmatter.path}>
-                  {post.node.frontmatter.title}
-                </Link>
-              </Feed.Summary>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Feed.Meta>
-                  Author:{" "}
-                  <a href="https://www.twitter.com/grahamplata">@grahamplata</a>
-                </Feed.Meta>
-                <Feed.Meta>Date: {post.node.frontmatter.date}</Feed.Meta>
-              </div>
-              <Feed.Label
-                style={styles.label}
-                image={
-                  post.node.frontmatter.featuredImage.childImageSharp.sizes
-                }
-              />
-              <Feed.Extra style={styles.extra}>{post.node.excerpt}</Feed.Extra>
-            </Feed.Content>
-          </Feed.Event>
-        ))}
-      </Feed>
-    </Container>
-  </div>
+  <Grid stackable centered columns={3}>
+    {data.allMarkdownRemark.edges.map(post => (
+      <Grid.Column>
+        <Card fluid key={post.node.id}>
+          <Image
+            fluid
+            src={post.node.frontmatter.featuredImage.childImageSharp.sizes.src}
+          />
+          <Card.Content>
+            <Card.Header>
+              <Link to={post.node.frontmatter.path}>
+                {post.node.frontmatter.title}
+              </Link>
+            </Card.Header>
+            <Card.Meta>
+              <span className="date">{post.node.frontmatter.date}</span>
+            </Card.Meta>
+            <Card.Description>{post.node.excerpt}</Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <a href="https://twitter.com/grahamplata">
+              <Icon name="user" />
+              @grahamplata
+            </a>
+          </Card.Content>
+        </Card>
+      </Grid.Column>
+    ))}
+  </Grid>
 );
 
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       limit: 10
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: ASC }
     ) {
       edges {
         node {
-          excerpt(pruneLength: 450)
+          excerpt(pruneLength: 100)
           id
           frontmatter {
             title
@@ -73,7 +50,7 @@ export const pageQuery = graphql`
             date
             featuredImage {
               childImageSharp {
-                sizes(maxWidth: 150) {
+                sizes(maxWidth: 550) {
                   ...GatsbyImageSharpSizes
                 }
               }
