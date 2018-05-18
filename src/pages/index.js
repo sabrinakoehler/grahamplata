@@ -1,51 +1,35 @@
 import React from "react";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
-import { Image, Container, Segment } from "semantic-ui-react";
+import { Grid, Divider, Header } from "semantic-ui-react";
 
 const styles = {
-  label: {
-    marginTop: 5,
-    marginLeft: 5,
-    letterSpacing: 2,
-    fontSize: 10
+  wrapper: {
+    marginTop: 100
   },
-  spacing: {
-    paddingTop: "3em",
-    paddingBottom: "3em"
+  graham: {
+    fontSize: 30,
+    color: "#00b5ad",
+    fontWeight: "bold"
   }
 };
 
-const rand = Math.floor(Math.random() * 10 + 1);
-
-const IndexPage = ({ data }) => (
-  <Container fluid>
-    <div style={styles.spacing}>
-      <h2>Welcome to my Digital Sandbox</h2>
-      <Img sizes={data.allFile.edges[rand].node.childImageSharp.sizes} />
-      <div>
-        <p style={styles.label && styles.inner}>
-          Nikon D500 80.0-400.0 mm ƒ/4.5-5.6
-        </p>
-      </div>
-    </div>
-  </Container>
+const IndexPage = () => (
+  <Grid style={styles.wrapper} stackable columns={2}>
+    <Grid.Row>
+      <Grid.Column>
+        <Header as="h1" textAlign="left">
+          Hey, I'm <a style={styles.graham}>Graham</a>. I’m a photographer,
+          gamer & side-project enthusiast. I'm currently a Support Engineer at
+          Syapse.
+        </Header>
+        <Divider />
+      </Grid.Column>
+      <Grid.Column>
+        <div />
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
 );
-
-export const query = graphql`
-  query ImagesQuery {
-    allFile(filter: { sourceInstanceName: { eq: "headerImages" } }) {
-      edges {
-        node {
-          childImageSharp {
-            sizes(maxWidth: 1000) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default IndexPage;
