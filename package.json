@@ -6,7 +6,7 @@
   "dependencies": {
     "exif-js": "^2.3.0",
     "gatsby": "^1.9.236",
-    "gatsby-cli": "^1.1.48",
+    "gatsby-cli": "^1.1.52",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
