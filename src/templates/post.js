@@ -3,17 +3,30 @@ import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import { Container, Button } from "semantic-ui-react";
 
-const Template = ({ data }) => {
+const Template = ({ data, pathContext }) => {
   const { markdownRemark: post } = data;
-  
+  const { next, prev } = pathContext;
+
   return (
     <Container>
       <div style={{ marginBottom: 25 }}>
-        <Link style={{ textDecoration: "none", float: "right" }} to="/blog">
-          <Button compact color="teal">
-            Return to Index
-          </Button>
-        </Link>
+        <Button.Group style={{ textDecoration: "none", float: "right" }}>
+          {prev && (
+            <Link to={prev.frontmatter.path}>
+              <Button>Previous: {prev.frontmatter.title}</Button>
+            </Link>
+          )}
+          <Button.Or />
+          <Link to="/blog">
+            <Button color="teal">Return to Index</Button>
+          </Link>
+          <Button.Or />
+          {next && (
+            <Link to={next.frontmatter.path}>
+              <Button>Previous: {next.frontmatter.title}</Button>
+            </Link>
+          )}
+        </Button.Group>
         <h1 style={{ margin: 0, display: "inline-block" }}>
           {post.frontmatter.title}
         </h1>
