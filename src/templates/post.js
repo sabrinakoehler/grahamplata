@@ -10,20 +10,18 @@ const Template = ({ data, pathContext }) => {
   return (
     <Container>
       <div style={{ marginBottom: 25 }}>
-        <Button.Group style={{ textDecoration: "none", float: "right" }}>
+        <Button.Group floated="right">
           {prev && (
             <Link to={prev.frontmatter.path}>
-              <Button>Previous: {prev.frontmatter.title}</Button>
+              <Button>{prev.frontmatter.title}</Button>
             </Link>
           )}
-          <Button.Or />
-          <Link to="/blog">
+          <Link to="/blog" style={{ paddingRight: "5px", paddingLeft: "5px" }}>
             <Button color="teal">Return to Index</Button>
           </Link>
-          <Button.Or />
           {next && (
             <Link to={next.frontmatter.path}>
-              <Button>Previous: {next.frontmatter.title}</Button>
+              <Button>{next.frontmatter.title}</Button>
             </Link>
           )}
         </Button.Group>
