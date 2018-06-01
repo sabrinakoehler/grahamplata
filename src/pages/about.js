@@ -35,10 +35,9 @@ const About = ({ data }) => (
         <h3>What are you known for?</h3>
         <p>
           I am a serial skill collector based in Philadelphia Pennsylvania.
-          Currently, I work at Syapse, a precision medicine data platform
-          enabling healthcare providers to use molecular profiling to diagnose
-          and treat patients. In a past life, I worked alongside the talented
-          filmmakers at Gabello Studios and Shufflebox Productions.
+          Currently, I work at Syapse as a support engineer. In a past life, I
+          worked alongside the talented filmmakers at Gabello Studios and
+          Shufflebox Productions.
         </p>
       </Grid.Column>
       <Grid.Column>
