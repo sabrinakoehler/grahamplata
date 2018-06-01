@@ -30,7 +30,7 @@ const About = ({ data }) => (
   <div style={styles.spacing}>
     <Grid stackable columns={2}>
       <Grid.Column>
-        <h2>Hi, I'm Graham! {emojify("👋", options)}</h2>
+        <h2>Hi, I'm Graham!</h2>
         <Img sizes={data.profileImage.sizes} />
         <h3>What are you known for?</h3>
         <p>
@@ -41,7 +41,7 @@ const About = ({ data }) => (
         </p>
       </Grid.Column>
       <Grid.Column>
-        <h2>Learn more about me {emojify("😺", options)}</h2>
+        <h2>Learn more about me</h2>
         <h3>What are you commonly known for?</h3>
         <p>
           I am commonly known for my technological prowess and keen eye for
