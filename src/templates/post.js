@@ -8,7 +8,7 @@ const Template = ({ data, pathContext }) => {
   const { next, prev } = pathContext;
 
   return (
-    <Container>
+    <Container text>
       <div style={{ marginBottom: 25 }}>
         <Button.Group floated="right">
           {prev && (

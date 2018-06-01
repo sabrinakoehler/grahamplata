@@ -47,7 +47,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            date
+            date(formatString: "MMMM DD, YYYY")
             featuredImage {
               childImageSharp {
                 sizes(maxWidth: 550) {
