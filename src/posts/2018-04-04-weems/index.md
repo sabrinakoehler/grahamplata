@@ -1,7 +1,7 @@
 ---
 path: '/weems'
 title: 'Weems, Virginia'
-date: '2018-03-29'
+date: '2018-04-04'
 featuredImage: "./12.jpg"
 ---
 

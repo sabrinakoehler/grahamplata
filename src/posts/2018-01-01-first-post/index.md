@@ -1,7 +1,7 @@
 ---
-path: '/hello'
+path: '/hello-world'
 title: 'Starting a blog... again!'
-date: '2018-01-30'
+date: '2018-01-01'
 featuredImage: "./bird.png"
 ---
 
