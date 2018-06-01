@@ -3,7 +3,7 @@ import Link from "gatsby-link";
 import { Card, Header, Image, Container, Grid, Icon } from "semantic-ui-react";
 
 const BlogPage = ({ data }) => (
-  <Grid stackable centered columns={3}>
+  <Grid stackable columns={3}>
     {data.allMarkdownRemark.edges.map(post => (
       <Grid.Column>
         <Card fluid key={post.node.id}>
