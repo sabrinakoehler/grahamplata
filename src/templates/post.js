@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
-import { Container, Button } from "semantic-ui-react";
+import { Container, Button, Icon } from "semantic-ui-react";
 
 const Template = ({ data, pathContext }) => {
   const { markdownRemark: post } = data;
@@ -13,21 +13,34 @@ const Template = ({ data, pathContext }) => {
         <Button.Group floated="right">
           {prev && (
             <Link to={prev.frontmatter.path}>
-              <Button>{prev.frontmatter.title}</Button>
+              <Button icon>
+                <Icon name="arrow left" />
+              </Button>
             </Link>
           )}
           <Link to="/blog" style={{ paddingRight: "5px", paddingLeft: "5px" }}>
-            <Button color="teal">Return to Index</Button>
+            <Button icon>
+              <Icon name="arrow up" />
+            </Button>
           </Link>
           {next && (
             <Link to={next.frontmatter.path}>
-              <Button>{next.frontmatter.title}</Button>
+              <Button icon>
+                <Icon name="arrow right" />
+              </Button>
             </Link>
           )}
         </Button.Group>
-        <h1 style={{ margin: 0, display: "inline-block" }}>
-          {post.frontmatter.title}
-        </h1>
+        <div>
+          <h1 style={{ margin: 0, display: "inline-block" }}>
+            {post.frontmatter.title}
+          </h1>
+        </div>
+        <div>
+          <h3 style={{ margin: 0, display: "inline-block" }}>
+            {post.frontmatter.date}
+          </h3>
+        </div>
       </div>
       <Container dangerouslySetInnerHTML={{ __html: post.html }} />
     </Container>
@@ -39,6 +52,7 @@ export const postQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
+        date(formatString: "MMMM DD, YYYY")
         path
         title
       }
