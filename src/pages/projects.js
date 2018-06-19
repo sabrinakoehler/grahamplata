@@ -17,19 +17,19 @@ const Projects = ({ data }) => (
       <Grid.Column>
         <Header textAlign="center">
           <Header.Content>
-            <Statistic.Group> 
-              <Statistic size='tiny'>
+            <Statistic.Group>
+              <Statistic size="tiny">
                 <Statistic.Value>22</Statistic.Value>
                 <Statistic.Label>Commits</Statistic.Label>
               </Statistic>
-              <Statistic size='tiny'>
+              <Statistic size="tiny">
                 <Statistic.Value>31,200</Statistic.Value>
                 <Statistic.Label>Lines</Statistic.Label>
               </Statistic>
-              <Statistic size='tiny'>
+              <Statistic size="tiny">
                 <Statistic.Value>12</Statistic.Value>
                 <Statistic.Label>Modules</Statistic.Label>
-              </Statistic >
+              </Statistic>
             </Statistic.Group>
           </Header.Content>
         </Header>
