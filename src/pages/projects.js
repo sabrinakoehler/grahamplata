@@ -1,6 +1,6 @@
-import React from 'react'
-import { Divider, Image, Grid, Header, Segment } from 'semantic-ui-react'
-import project from '../images/dota.png'
+import React from "react";
+import { Divider, Image, Grid, Header, Segment } from "semantic-ui-react";
+import project from "../images/dota.png";
 
 const Projects = () => (
   <div>
@@ -12,22 +12,37 @@ const Projects = () => (
         <Header textAlign="center">
           <Header.Content />
         </Header>
-        <Image src={project} fluid />
+        <Image
+          src={project}
+          fluid
+          target="_blank"
+          href="http://acid-scene.surge.sh/"
+        />
         <Segment basic>
-          Dynamic DotA scorecard that displays a short synopsis of a player's
-          overall performance. The Card utilizes React, Redux and stats provided
-          by the openDota Project.
+          A score Card that displays a short synopsis of a player's overall
+          performance. The Card utilizes React, Redux and stats provided by the
+          openDota Project.
         </Segment>
       </Grid.Column>
       <Grid.Column>
         <Header as="h2" textAlign="center">
           <Header.Content>
-            <a target="_blank" href="http://acid-scene.surge.sh/">
-              Dota Stats
+            <a
+              style={{ color: "rgba(0, 0, 0, 0.87)" }}
+              target="_blank"
+              href="http://acid-scene.surge.sh/"
+            >
+              Dota 2 Score Card
             </a>
           </Header.Content>
         </Header>
-        <p>Inspired by platforms like dotabuff and openDota</p>
+        <p style={{ paddingTop: "10px" }}>
+          Insprired by the OpenDota Web UI I created a simple scored card for
+          viewing Dota 2 data. This utilizes the OpenDota API, which is also an
+          open source project. The purpose was to stregthen my react skills and
+          learn a bit of redux along the way. The app provides a bite sized view
+          of a players recent dota stats.{" "}
+        </p>
         <Divider horizontal section>
           Much ado about dota
         </Divider>
@@ -46,9 +61,10 @@ const Projects = () => (
           together when we departed for college. 10 years later we are still
           going strong. It's amazing how far the game has come.
         </p>
+        <small>-- Project Last Updated: June 25, 2018</small>
       </Grid.Column>
     </Grid>
   </div>
-)
+);
 
-export default Projects
+export default Projects;
