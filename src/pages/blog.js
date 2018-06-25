@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "gatsby-link";
-import { Card, Header, Image, Container, Grid, Icon } from "semantic-ui-react";
+import React from 'react'
+import Link from 'gatsby-link'
+import { Card, Image, Grid, Icon } from 'semantic-ui-react'
 
 const BlogPage = ({ data }) => (
   <Grid stackable columns={3}>
@@ -32,7 +32,7 @@ const BlogPage = ({ data }) => (
       </Grid.Column>
     ))}
   </Grid>
-);
+)
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -60,6 +60,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default BlogPage;
+export default BlogPage

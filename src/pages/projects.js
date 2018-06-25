@@ -1,8 +1,8 @@
-import React from "react";
-import { Divider, Image, Grid, Header, Segment } from "semantic-ui-react";
-import project from "../images/dota.png";
+import React from 'react'
+import { Divider, Image, Grid, Header, Segment } from 'semantic-ui-react'
+import project from '../images/dota.png'
 
-const Projects = ({ data }) => (
+const Projects = () => (
   <div>
     <Header as="h4" textAlign="center">
       <Header.Content />
@@ -21,23 +21,13 @@ const Projects = ({ data }) => (
       </Grid.Column>
       <Grid.Column>
         <Header as="h2" textAlign="center">
-          <Header.Content>Dota Stats</Header.Content>
+          <Header.Content>
+            <a target="_blank" href="http://acid-scene.surge.sh/">
+              Dota Stats
+            </a>
+          </Header.Content>
         </Header>
-        <p>
-          Aliquam eu dui congue, blandit nunc eget, tempor tortor. Sed euismod
-          nunc risus, quis luctus lacus tincidunt nec. Ut cursus lacinia purus,
-          a venenatis sem tristique ac. Vestibulum at sem gravida, consequat
-          nisi vitae, faucibus est. Fusce feugiat, leo rhoncus sodales
-          scelerisque, justo elit maximus tortor, nec finibus neque dui non
-          elit. Etiam non ligula maximus, tincidunt orci nec, scelerisque diam.
-          Nullam quis fringilla augue, id lobortis urna. Aenean euismod ex
-          velit, sed finibus sapien iaculis nec. Maecenas bibendum justo id arcu
-          imperdiet finibus. Donec convallis interdum rhoncus. Aenean porta urna
-          non tellus commodo, vitae suscipit lectus lacinia. Donec feugiat metus
-          quam, non auctor sem maximus sit amet. Aliquam ac libero in nisl
-          maximus hendrerit eget pretium odio. Phasellus sed lacus sed enim
-          egestas mollis.
-        </p>
+        <p>Inspired by platforms like dotabuff and openDota</p>
         <Divider horizontal section>
           Much ado about dota
         </Divider>
@@ -54,11 +44,11 @@ const Projects = ({ data }) => (
           Even with all its hard edges, it united our friend group into one
           focused effort. I can attribute Dota for keeping my friend group
           together when we departed for college. 10 years later we are still
-          going strong. It's amazing how far the game has come. -- Graham
+          going strong. It's amazing how far the game has come.
         </p>
       </Grid.Column>
     </Grid>
   </div>
-);
+)
 
-export default Projects;
+export default Projects
