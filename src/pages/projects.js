@@ -37,11 +37,11 @@ const Projects = () => (
           </Header.Content>
         </Header>
         <p style={{ paddingTop: "10px" }}>
-          Insprired by the OpenDota Web UI I created a simple scored card for
+          Inspired by the OpenDota Web UI I created a simple scored card for
           viewing Dota 2 data. This utilizes the OpenDota API, which is also an
-          open source project. The purpose was to stregthen my react skills and
-          learn a bit of redux along the way. The app provides a bite sized view
-          of a players recent dota stats.{" "}
+          open source project. The purpose was to strengthen my react skills and
+          learn a bit of redux along the way. The app provides a bite-sized view
+          of players recent dota stats.{" "}
         </p>
         <Divider horizontal section>
           Much ado about dota
