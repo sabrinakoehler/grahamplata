@@ -1,18 +1,16 @@
-import React from "react";
-import Link from "gatsby-link";
-import Img from "gatsby-image";
-import { Grid, Divider, Header } from "semantic-ui-react";
+import React from 'react'
+import { Grid, Divider, Header } from 'semantic-ui-react'
 
 const styles = {
   wrapper: {
-    marginTop: 100
+    marginTop: 100,
   },
   graham: {
     fontSize: 30,
-    color: "#00b5ad",
-    fontWeight: "bold"
-  }
-};
+    color: '#00b5ad',
+    fontWeight: 'bold',
+  },
+}
 
 const IndexPage = () => (
   <Grid style={styles.wrapper} stackable columns={2}>
@@ -30,6 +28,6 @@ const IndexPage = () => (
       </Grid.Column>
     </Grid.Row>
   </Grid>
-);
+)
 
-export default IndexPage;
+export default IndexPage

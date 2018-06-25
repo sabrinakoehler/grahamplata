@@ -1,11 +1,10 @@
-import React from "react";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
-import { Container, Button, Icon } from "semantic-ui-react";
+import React from 'react'
+import Link from 'gatsby-link'
+import { Container, Button, Icon } from 'semantic-ui-react'
 
 const Template = ({ data, pathContext }) => {
-  const { markdownRemark: post } = data;
-  const { next, prev } = pathContext;
+  const { markdownRemark: post } = data
+  const { next, prev } = pathContext
 
   return (
     <Container text>
@@ -18,7 +17,7 @@ const Template = ({ data, pathContext }) => {
               </Button>
             </Link>
           )}
-          <Link to="/blog" style={{ paddingRight: "5px", paddingLeft: "5px" }}>
+          <Link to="/blog" style={{ paddingRight: '5px', paddingLeft: '5px' }}>
             <Button icon>
               <Icon name="arrow up" />
             </Button>
@@ -32,20 +31,20 @@ const Template = ({ data, pathContext }) => {
           )}
         </Button.Group>
         <div>
-          <h1 style={{ margin: 0, display: "inline-block" }}>
+          <h1 style={{ margin: 0, display: 'inline-block' }}>
             {post.frontmatter.title}
           </h1>
         </div>
         <div>
-          <h3 style={{ margin: 0, display: "inline-block" }}>
+          <h3 style={{ margin: 0, display: 'inline-block' }}>
             {post.frontmatter.date}
           </h3>
         </div>
       </div>
       <Container dangerouslySetInnerHTML={{ __html: post.html }} />
     </Container>
-  );
-};
+  )
+}
 
 export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -58,6 +57,6 @@ export const postQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default Template;
+export default Template

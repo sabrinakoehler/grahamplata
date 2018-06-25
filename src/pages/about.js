@@ -1,20 +1,19 @@
-import React from "react";
-import Link from "gatsby-link";
-import Img from "gatsby-image";
-import { Header, Grid, Image, Segment, List } from "semantic-ui-react";
-import { emojify } from "react-emojione";
+import React from 'react'
+import Img from 'gatsby-image'
+import { Grid, List } from 'semantic-ui-react'
+import { emojify } from 'react-emojione'
 
 const styles = {
   syapse: {
-    color: "#21C2D2",
+    color: '#21C2D2',
     fontWeight: 700,
-    textTransform: "uppercase"
+    textTransform: 'uppercase',
   },
   spacing: {
-    paddingTop: "3em",
-    paddingBottom: "3em"
-  }
-};
+    paddingTop: '3em',
+    paddingBottom: '3em',
+  },
+}
 
 const options = {
   convertShortnames: true,
@@ -22,9 +21,9 @@ const options = {
   convertAscii: true,
   style: {
     height: 48,
-    margin: 1
-  }
-};
+    margin: 1,
+  },
+}
 
 const About = ({ data }) => (
   <div style={styles.spacing}>
@@ -49,7 +48,7 @@ const About = ({ data }) => (
         </p>
         <h3>Where are you currently?</h3>
         <p>
-          Right now I work as a Support Engineer for{" "}
+          Right now I work as a Support Engineer for{' '}
           <a style={styles.syapse} href="https://www.syapse.com/">
             Syapse
           </a>
@@ -104,7 +103,7 @@ const About = ({ data }) => (
         <h3>Where would you like to travel?</h3>
         <List>
           <List.Item>
-            <List.Icon>{emojify("🏔️")}</List.Icon>
+            <List.Icon>{emojify('🏔️')}</List.Icon>
             <List.Content>
               <List.Header>ICELAND</List.Header>
               <List.Description>
@@ -114,7 +113,7 @@ const About = ({ data }) => (
             </List.Content>
           </List.Item>
           <List.Item>
-            <List.Icon>{emojify("🗺️")}</List.Icon>
+            <List.Icon>{emojify('🗺️')}</List.Icon>
             <List.Content>
               <List.Header>New Zealand</List.Header>
               <List.Description>
@@ -125,7 +124,7 @@ const About = ({ data }) => (
             </List.Content>
           </List.Item>
           <List.Item>
-            <List.Icon>{emojify("🌁")}</List.Icon>
+            <List.Icon>{emojify('🌁')}</List.Icon>
             <List.Content>
               <List.Header>San Francisco</List.Header>
               <List.Description>I have heard good things.</List.Description>
@@ -135,7 +134,7 @@ const About = ({ data }) => (
       </Grid.Column>
     </Grid>
   </div>
-);
+)
 
 export const pageQuery = graphql`
   query ProfileImageQuery {
@@ -145,6 +144,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default About;
+export default About

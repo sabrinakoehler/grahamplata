@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Link from "gatsby-link";
-import { Input, Menu } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 
 class MainMenu extends Component {
   state = { activeItem: null };
