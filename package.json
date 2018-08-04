@@ -5,7 +5,7 @@
   "author": "Graham Plata <graham.plata@gmail.com>",
   "dependencies": {
     "exif-js": "^2.3.0",
-    "gatsby": "^1.9.261",
+    "gatsby": "^1.9.277",
     "gatsby-cli": "^1.1.52",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.39",
@@ -17,6 +17,7 @@
     "gatsby-transformer-sharp": "^1.6.22",
     "react-emojione": "^5.0.0",
     "react-helmet": "^5.2.0",
+    "react-player": "^1.6.4",
     "semantic-ui-css": "^2.3.1",
     "semantic-ui-react": "^0.79.0",
     "serve": "^6.5.7"
