@@ -34,9 +34,8 @@ const TemplateWrapper = ({ children, location }) => (
     <Container>
       <div style={styles.container}>
         <div style={styles.subContainer}>
-          {/* {location.pathname == `/` && <MainMenu />} */}
           <MainMenu />
-          {children()}
+          {children}
         </div>
       </div>
       <Footer />
