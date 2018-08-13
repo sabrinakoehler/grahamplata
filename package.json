@@ -5,23 +5,25 @@
   "author": "Graham Plata <graham.plata@gmail.com>",
   "dependencies": {
     "exif-js": "^2.3.0",
-    "gatsby": "^1.9.277",
-    "gatsby-cli": "^1.1.52",
-    "gatsby-image": "^1.0.42",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-react-helmet": "^2.0.8",
-    "gatsby-plugin-sharp": "^1.6.41",
-    "gatsby-remark-images": "^1.5.60",
-    "gatsby-source-filesystem": "^1.5.36",
-    "gatsby-transformer-remark": "^1.7.37",
-    "gatsby-transformer-sharp": "^1.6.22",
+    "gatsby": "next",
+    "gatsby-cli": "next",
+    "gatsby-image": "next",
+    "gatsby-link": "next",
+    "gatsby-plugin-google-analytics": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sharp": "next",
+    "gatsby-remark-images": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "next",
+    "gatsby-transformer-sharp": "next",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-emojione": "^5.0.0",
     "react-helmet": "^5.2.0",
     "react-player": "^1.6.4",
-    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.79.0",
-    "serve": "^6.5.7"
+    "serve": "^6.5.8"
   },
   "keywords": [
     "gatsby"
@@ -36,6 +38,6 @@
     "start": "serve public/"
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "prettier": "^1.14.2"
   }
 }
