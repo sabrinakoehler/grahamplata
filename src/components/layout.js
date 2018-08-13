@@ -28,7 +28,7 @@ const meta = [
   },
 ]
 
-const TemplateWrapper = ({ children, location }) => (
+export default ({ children, location }) => (
   <div>
     <Helmet title="Graham Plata's Digital Sandbox" meta={meta} />
     <Container>
@@ -42,9 +42,3 @@ const TemplateWrapper = ({ children, location }) => (
     </Container>
   </div>
 )
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
-
-export default TemplateWrapper

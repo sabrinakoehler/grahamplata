@@ -3,8 +3,8 @@ import Link from "gatsby-link";
 import { Card, Image, Grid, Icon } from "semantic-ui-react";
 import Layout from "../components/layout";
 
-const BlogPage = ({ data }) => (
-  <Layout>
+const BlogPage = ({ data, props }) => (
+  <Layout location={props.location}>
     <Grid stackable columns={3}>
       {data.allMarkdownRemark.edges.map(post => (
         <Grid.Column>

@@ -13,7 +13,7 @@ const styles = {
   }
 };
 
-const IndexPage = () => (
+const IndexPage = props => (
   <Layout>
     <Grid style={styles.wrapper} stackable columns={2}>
       <Grid.Row>

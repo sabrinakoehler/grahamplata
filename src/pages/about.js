@@ -26,8 +26,8 @@ const options = {
   }
 };
 
-const About = ({ data }) => (
-  <Layout>
+const About = ({ data, props }) => (
+  <Layout location={props.location}>
     <div style={styles.spacing}>
       <Grid stackable columns={2}>
         <Grid.Column>

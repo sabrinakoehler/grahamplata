@@ -6,8 +6,8 @@ import Layout from "../components/layout";
 import DotaStats from "../projects/dotastats";
 import Reel from "../projects/reel";
 
-const Projects = () => (
-  <Layout>
+const Projects = props => (
+  <Layout location={props.location}>
     <Header as="h2" textAlign="left">
       <Header.Content>Personal Projects</Header.Content>
     </Header>
