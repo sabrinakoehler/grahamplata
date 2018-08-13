@@ -9,12 +9,7 @@ const DotaStats = () => (
         <Header textAlign="center">
           <Header.Content />
         </Header>
-        <Image
-          src={project}
-          fluid
-          target="_blank"
-          href="http://acid-scene.surge.sh/"
-        />
+        <Image src={project} fluid href="http://acid-scene.surge.sh/" />
         <Segment basic>
           A score Card that displays a short synopsis of a player's overall
           performance. The Card utilizes React, Redux and stats provided by the
@@ -26,7 +21,6 @@ const DotaStats = () => (
           <Header.Content>
             <a
               style={{ color: "rgba(0, 0, 0, 0.87)" }}
-              target="_blank"
               href="http://acid-scene.surge.sh/"
             >
               Dota 2 Score Card

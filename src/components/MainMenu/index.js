@@ -8,9 +8,9 @@ class MainMenu extends Component {
     this.setState({ activeItem: name });
   };
 
-  componentDidMount() {
-    this.setState({ activeItem: location.pathname.slice(1) });
-  }
+  // componentDidMount() {
+  //   this.setState({ activeItem: location.pathname.slice(1) });
+  // }
 
   render() {
     const { activeItem } = this.state;

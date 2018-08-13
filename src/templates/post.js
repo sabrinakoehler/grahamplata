@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import { Container, Button, Icon } from "semantic-ui-react";
+import { StaticQuery, graphql } from "gatsby"
 
 const Template = ({ data, pathContext }) => {
   const { markdownRemark: post } = data;

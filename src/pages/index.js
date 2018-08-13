@@ -19,7 +19,7 @@ const IndexPage = props => (
       <Grid.Row>
         <Grid.Column>
           <Header as="h1" textAlign="left">
-            Hey, I'm <a style={styles.graham}>Graham</a>. I’m a photographer,
+            Hey, I'm <a href="#" style={styles.graham}>Graham</a>. I’m a photographer,
             gamer & side-project enthusiast. I'm currently a Support Engineer at
             Syapse.
           </Header>

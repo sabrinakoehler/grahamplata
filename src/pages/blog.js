@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import { Card, Image, Grid, Icon } from "semantic-ui-react";
 import Layout from "../components/layout";
+import { StaticQuery, graphql } from "gatsby";
 
 const BlogPage = ({ data, props }) => (
   <Layout location={props.location}>

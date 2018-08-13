@@ -1,8 +1,8 @@
 import React from "react";
-import Img from "gatsby-image";
-import { Grid, List } from "semantic-ui-react";
+import { Image, Grid, List } from "semantic-ui-react";
 import { emojify } from "react-emojione";
 import Layout from "../components/layout";
+import profile from "../images/profile.png";
 
 const styles = {
   syapse: {
@@ -16,23 +16,13 @@ const styles = {
   }
 };
 
-const options = {
-  convertShortnames: true,
-  convertUnicode: true,
-  convertAscii: true,
-  style: {
-    height: 48,
-    margin: 1
-  }
-};
-
-const About = ({ data, props }) => (
+const About = props => (
   <Layout location={props.location}>
     <div style={styles.spacing}>
       <Grid stackable columns={2}>
         <Grid.Column>
           <h2>Hi, I'm Graham!</h2>
-          <Img sizes={data.profileImage.sizes} />
+          <Image fluid target="_blank" src={profile} />
           <h3>What are you known for?</h3>
           <p>
             I am a serial skill collector based in Philadelphia Pennsylvania.
@@ -138,15 +128,5 @@ const About = ({ data, props }) => (
     </div>
   </Layout>
 );
-
-export const pageQuery = graphql`
-  query ProfileImageQuery {
-    profileImage: imageSharp(id: { regex: "/profile/" }) {
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes_noBase64
-      }
-    }
-  }
-`;
 
 export default About;
