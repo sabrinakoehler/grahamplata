@@ -2,7 +2,7 @@ import React from 'react'
 import { Image, Grid, List } from 'semantic-ui-react'
 import { emojify } from 'react-emojione'
 import Layout from '../components/layout'
-import profile from '../images/profile.png'
+import profile from '../images/me.png'
 
 const styles = {
   syapse: {
