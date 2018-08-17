@@ -1,8 +1,7 @@
 import React from "react";
-import Link from "gatsby-link";
 import { Container, Card, Image, Grid, Icon } from "semantic-ui-react";
 import Layout from "../components/layout";
-import { StaticQuery, graphql } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 
 const BlogPage = ({ children, props }) => (
   <StaticQuery

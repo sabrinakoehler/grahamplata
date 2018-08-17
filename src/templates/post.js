@@ -1,6 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
-import Link from "gatsby-link";
+import { graphql, Link } from "gatsby";
 import { Container, Button, Icon } from "semantic-ui-react";
 import Layout from "../components/layout";
 
