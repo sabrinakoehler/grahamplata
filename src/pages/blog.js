@@ -6,7 +6,7 @@ import { Link, StaticQuery, graphql } from "gatsby";
 const BlogPage = ({ children, props }) => (
   <StaticQuery
     query={graphql`
-      query IndexQuery {
+      {
         allMarkdownRemark(
           limit: 10
           sort: { fields: [frontmatter___date], order: DESC }
