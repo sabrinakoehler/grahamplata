@@ -38,7 +38,7 @@ const BlogPage = ({ children, props }) => (
         <Container>
           <Grid stackable columns={3}>
             {data.allMarkdownRemark.edges.map(post => (
-              <Grid.Column>
+              <Grid.Column key={post.node.id}>
                 <Card fluid key={post.node.id}>
                   <Image
                     fluid
