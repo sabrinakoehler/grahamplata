@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Container } from 'semantic-ui-react'
 
@@ -28,24 +27,17 @@ const meta = [
   },
 ]
 
-const TemplateWrapper = ({ children, location }) => (
+export default ({ children, location }) => (
   <div>
     <Helmet title="Graham Plata's Digital Sandbox" meta={meta} />
     <Container>
       <div style={styles.container}>
         <div style={styles.subContainer}>
-          {/* {location.pathname == `/` && <MainMenu />} */}
           <MainMenu />
-          {children()}
+          {children}
         </div>
       </div>
       <Footer />
     </Container>
   </div>
 )
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
-
-export default TemplateWrapper

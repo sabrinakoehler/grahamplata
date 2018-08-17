@@ -1,6 +1,6 @@
-import React from "react";
-import { Grid, Header } from "semantic-ui-react";
-import ReactPlayer from "react-player";
+import React from 'react'
+import { Grid, Header } from 'semantic-ui-react'
+import ReactPlayer from 'react-player'
 
 const Reel = () => (
   <div>
@@ -9,13 +9,13 @@ const Reel = () => (
         <Header as="h2" textAlign="left">
           <Header.Content>2016 Video Reel</Header.Content>
         </Header>
-        <p style={{ paddingTop: "10px" }}>
+        <p style={{ paddingTop: '10px' }}>
           A few years ago I worked for a couple boutique video studios creating
           commercials, music videos and motion graphics. Aside you can find a
           selection of shots from my favorite projects. Since my career switch I
           find myself doing less video content but enjoying it so much more.
         </p>
-        <p style={{ paddingTop: "10px" }}>
+        <p style={{ paddingTop: '10px' }}>
           In the reel you will find clips from:
         </p>
         <ul>
@@ -44,18 +44,18 @@ const Reel = () => (
       </Grid.Column>
     </Grid>
   </div>
-);
+)
 
 const styles = {
   playerWrapper: {
-    position: "relative",
-    paddingTop: "56.25%"
+    position: 'relative',
+    paddingTop: '56.25%',
   },
   reactPlayer: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
-    left: 0
-  }
-};
+    left: 0,
+  },
+}
 
-export default Reel;
+export default Reel
