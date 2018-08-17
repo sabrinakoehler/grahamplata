@@ -1,17 +1,17 @@
-import React, { Fragment } from "react";
-import { Grid, Divider, Header } from "semantic-ui-react";
-import Layout from "../components/layout";
+import React, { Fragment } from 'react'
+import { Grid, Divider, Header } from 'semantic-ui-react'
+import Layout from '../components/layout'
 
 const styles = {
   wrapper: {
-    marginTop: 100
+    marginTop: 100,
   },
   graham: {
     fontSize: 30,
-    color: "#00b5ad",
-    fontWeight: "bold"
-  }
-};
+    color: '#00b5ad',
+    fontWeight: 'bold',
+  },
+}
 
 const IndexPage = props => (
   <Layout>
@@ -31,6 +31,6 @@ const IndexPage = props => (
       </Grid.Row>
     </Grid>
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage

@@ -1,20 +1,20 @@
-import React from "react";
-import { Image, Grid, List } from "semantic-ui-react";
-import { emojify } from "react-emojione";
-import Layout from "../components/layout";
-import profile from "../images/profile.png";
+import React from 'react'
+import { Image, Grid, List } from 'semantic-ui-react'
+import { emojify } from 'react-emojione'
+import Layout from '../components/layout'
+import profile from '../images/profile.png'
 
 const styles = {
   syapse: {
-    color: "#21C2D2",
+    color: '#21C2D2',
     fontWeight: 700,
-    textTransform: "uppercase"
+    textTransform: 'uppercase',
   },
   spacing: {
-    paddingTop: "3em",
-    paddingBottom: "3em"
-  }
-};
+    paddingTop: '3em',
+    paddingBottom: '3em',
+  },
+}
 
 const About = props => (
   <Layout location={props.location}>
@@ -40,7 +40,7 @@ const About = props => (
           </p>
           <h3>Where are you currently?</h3>
           <p>
-            Right now I work as a Support Engineer for{" "}
+            Right now I work as a Support Engineer for{' '}
             <a style={styles.syapse} href="https://www.syapse.com/">
               Syapse
             </a>
@@ -95,7 +95,7 @@ const About = props => (
           <h3>Where would you like to travel?</h3>
           <List>
             <List.Item>
-              <List.Icon>{emojify("🏔️")}</List.Icon>
+              <List.Icon>{emojify('🏔️')}</List.Icon>
               <List.Content>
                 <List.Header>ICELAND</List.Header>
                 <List.Description>
@@ -105,7 +105,7 @@ const About = props => (
               </List.Content>
             </List.Item>
             <List.Item>
-              <List.Icon>{emojify("🗺️")}</List.Icon>
+              <List.Icon>{emojify('🗺️')}</List.Icon>
               <List.Content>
                 <List.Header>New Zealand</List.Header>
                 <List.Description>
@@ -116,7 +116,7 @@ const About = props => (
               </List.Content>
             </List.Item>
             <List.Item>
-              <List.Icon>{emojify("🌁")}</List.Icon>
+              <List.Icon>{emojify('🌁')}</List.Icon>
               <List.Content>
                 <List.Header>San Francisco</List.Header>
                 <List.Description>I have heard good things.</List.Description>
@@ -127,6 +127,6 @@ const About = props => (
       </Grid>
     </div>
   </Layout>
-);
+)
 
-export default About;
+export default About
