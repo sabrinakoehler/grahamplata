@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Grid, Divider, Header } from "semantic-ui-react";
 import Layout from "../components/layout";
 
@@ -19,14 +19,17 @@ const IndexPage = props => (
       <Grid.Row>
         <Grid.Column>
           <Header as="h1" textAlign="left">
-            Hey, I'm <a href="#" style={styles.graham}>Graham</a>. I’m a photographer,
-            gamer & side-project enthusiast. I'm currently a Support Engineer at
-            Syapse.
+            Hey, I'm{" "}
+            <a href="#" style={styles.graham}>
+              Graham
+            </a>
+            . I’m a photographer, gamer & side-project enthusiast. I'm currently
+            a Support Engineer at Syapse.
           </Header>
           <Divider />
         </Grid.Column>
         <Grid.Column>
-          <div />
+          <Fragment />
         </Grid.Column>
       </Grid.Row>
     </Grid>
