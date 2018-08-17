@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Link from "gatsby-link";
 import { Container, Button, Icon } from "semantic-ui-react";
 import Layout from "../components/layout";
@@ -53,7 +54,7 @@ const Template = ({ data, pageContext }) => {
 };
 
 export const postQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
