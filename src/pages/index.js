@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Grid, Divider, Header } from 'semantic-ui-react'
+import Link from 'gatsby-link'
 import Layout from '../components/layout'
 
 const styles = {
@@ -19,9 +20,12 @@ const IndexPage = props => (
       <Grid.Row>
         <Grid.Column>
           <Header as="h1" textAlign="left">
-            Hey, I'm <b style={styles.graham}>Graham</b>. I’m a photographer,
-            gamer & side-project enthusiast. I'm currently a Support Engineer at
-            Syapse.
+            Hey, I'm{' '}
+            <Link to="/about">
+              <b style={styles.graham}>Graham</b>
+            </Link>
+            . I’m a photographer, gamer & side-project enthusiast. I'm currently
+            a Support Engineer at Syapse.
           </Header>
           <Divider />
         </Grid.Column>
